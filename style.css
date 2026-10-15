@@ -516,11 +516,30 @@ body {
   text-decoration: none;
 }
 
-/* Hero Section */
+/* Single Screen Landing Page Layout */
+body.landing-single-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.landing-single-screen main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .hero-section {
   padding: var(--spacing-section) 0;
   background-color: var(--color-canvas);
   position: relative;
+}
+
+.hero-section.hero-section-full {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 60px 0 80px;
 }
 
 .hero-grid {
@@ -997,6 +1016,24 @@ body {
   color: var(--color-on-dark-soft);
   padding: 64px 0 40px;
   border-top: 1px solid #281d31;
+}
+
+.site-footer.site-footer-minimal {
+  padding: 24px 0;
+  border-top: 1px solid #281d31;
+}
+
+.footer-minimal-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-bottom-copy {
+  font-size: 13px;
+  color: var(--color-muted-soft);
 }
 
 .footer-top {
