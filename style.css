@@ -598,17 +598,27 @@ body.landing-single-screen main {
   max-width: 540px;
 }
 
-/* Waitlist Form Component */
-.waitlist-form-container {
-  width: 100%;
-  max-width: 520px;
-  margin-bottom: 28px;
+/* Contact Action Component */
+.hero-contact-card {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.waitlist-form {
-  display: flex;
-  gap: 8px;
-  width: 100%;
+.btn-contact-hero {
+  height: 52px;
+  padding: 0 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--rounded-md);
+  box-shadow: 0 4px 16px rgba(132, 19, 150, 0.28);
+  gap: 12px;
+}
+
+.btn-contact-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(132, 19, 150, 0.35);
 }
 
 .waitlist-input {
