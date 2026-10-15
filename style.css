@@ -1,42 +1,53 @@
 /* ==========================================================================
    YOUNGISTAN (YES - YOUNG ELITE SUCCESS)
-   Coming Soon Product Launching Page Design System
+   Theme Palette: Exact Royal Purple (#841396), Saffron (#F28518), Green (#34B22B)
    ========================================================================== */
 
 :root {
-  /* Brand & Accent */
-  --color-primary: #cc785c;
-  --color-primary-active: #a9583e;
+  /* Brand & Accent from Logo */
+  --color-primary: #841396;          /* Royal Logo Purple */
+  --color-primary-active: #6c0e7c;   /* Deep Purple */
+  --color-primary-light: #f5e8f8;    /* Soft Lavender */
   --color-primary-disabled: #e6dfd8;
-  --color-accent-teal: #5db8a6;
-  --color-accent-amber: #e8a55a;
-  --color-accent-purple: #7a288a;
+  
+  --color-saffron: #f28518;          /* Wing Saffron / Orange */
+  --color-saffron-active: #d66f0d;
+  --color-saffron-light: #fff2e5;
 
-  /* Surfaces */
-  --color-canvas: #faf9f5;
-  --color-surface-soft: #f5f0e8;
-  --color-surface-card: #efe9de;
-  --color-surface-cream-strong: #e8e0d2;
-  --color-surface-dark: #181715;
-  --color-surface-dark-elevated: #252320;
-  --color-surface-dark-soft: #1f1e1b;
-  --color-hairline: #e6dfd8;
-  --color-hairline-soft: #ebe6df;
+  --color-green: #34b22b;            /* Wing Green */
+  --color-green-active: #2a9423;
+  --color-green-light: #ebf8ea;
+
+  --color-accent-teal: #34b22b;      /* Status indicator */
+  --color-accent-amber: #f28518;
+
+  /* Surfaces: Soft Ivory & Lilac Pearl */
+  --color-canvas: #faf8fc;           /* Crisp canvas with delicate violet pearl tint */
+  --color-surface-soft: #f4edf9;     /* Soft lilac band */
+  --color-surface-card: #eee4f5;     /* Cards one step darker */
+  --color-surface-cream-strong: #e4d5ee;
+  
+  /* Dark Surfaces: Royal Dark Plum / Midnight Violet */
+  --color-surface-dark: #140d1a;     /* Deep luxurious dark */
+  --color-surface-dark-elevated: #20162a;
+  --color-surface-dark-soft: #1a1122;
+  --color-hairline: #e4d8ec;
+  --color-hairline-soft: #ede4f4;
 
   /* Text */
-  --color-ink: #141413;
-  --color-body-strong: #252523;
-  --color-body: #3d3d3a;
-  --color-muted: #6c6a64;
-  --color-muted-soft: #8e8b82;
+  --color-ink: #160f1e;              /* Deep ink */
+  --color-body-strong: #2c2136;
+  --color-body: #42364c;
+  --color-muted: #6f627a;
+  --color-muted-soft: #9385a0;
   --color-on-primary: #ffffff;
-  --color-on-dark: #faf9f5;
-  --color-on-dark-soft: #a09d96;
+  --color-on-dark: #faf8fc;
+  --color-on-dark-soft: #aba0b6;
 
   /* Semantic */
-  --color-success: #5db872;
-  --color-warning: #d4a017;
-  --color-error: #c64545;
+  --color-success: #34b22b;
+  --color-warning: #f28518;
+  --color-error: #d93838;
 
   /* Typography Font Stacks */
   --font-display: "Copernicus", "Tiempos Headline", "Cormorant Garamond", "EB Garamond", Garamond, "Times New Roman", serif;
@@ -62,11 +73,11 @@
   --rounded-pill: 9999px;
   --rounded-full: 50%;
 
-  /* Transitions */
+  /* Transitions & Shadows */
   --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
   --transition-base: 220ms cubic-bezier(0.16, 1, 0.3, 1);
-  --shadow-subtle: 0 1px 3px rgba(20, 20, 19, 0.08);
-  --shadow-elevated: 0 8px 30px rgba(20, 20, 19, 0.1);
+  --shadow-subtle: 0 1px 4px rgba(22, 15, 30, 0.06);
+  --shadow-elevated: 0 12px 36px rgba(20, 13, 26, 0.22);
 }
 
 /* Base Reset & Core Styles */
@@ -184,22 +195,6 @@ body {
   line-height: 1.4;
 }
 
-.caption-uppercase {
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.4;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.code-font {
-  font-family: var(--font-code);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.6;
-}
-
 /* Container & Layout */
 .container {
   width: 100%;
@@ -268,12 +263,12 @@ body {
   font-weight: 500;
   line-height: 1.0;
   border-radius: var(--rounded-md);
-  padding: 12px 20px;
-  height: 44px;
+  padding: 12px 22px;
+  height: 46px;
   cursor: pointer;
   text-decoration: none;
   border: 1px solid transparent;
-  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
   white-space: nowrap;
 }
 
@@ -281,6 +276,7 @@ body {
   background-color: var(--color-primary);
   color: var(--color-on-primary);
   border-color: var(--color-primary);
+  box-shadow: 0 2px 10px rgba(132, 19, 150, 0.25);
 }
 
 .btn-primary:hover,
@@ -288,6 +284,19 @@ body {
   background-color: var(--color-primary-active);
   border-color: var(--color-primary-active);
   color: var(--color-on-primary);
+  box-shadow: 0 4px 14px rgba(132, 19, 150, 0.35);
+}
+
+.btn-saffron {
+  background-color: var(--color-saffron);
+  color: #ffffff;
+  border-color: var(--color-saffron);
+  box-shadow: 0 2px 10px rgba(242, 133, 24, 0.25);
+}
+
+.btn-saffron:hover {
+  background-color: var(--color-saffron-active);
+  border-color: var(--color-saffron-active);
 }
 
 .btn-secondary {
@@ -298,7 +307,7 @@ body {
 
 .btn-secondary:hover {
   background-color: var(--color-surface-soft);
-  border-color: #d8d0c6;
+  border-color: #d8cce2;
 }
 
 .btn-secondary-on-dark {
@@ -308,32 +317,19 @@ body {
 }
 
 .btn-secondary-on-dark:hover {
-  background-color: #2f2c28;
+  background-color: #2b1f36;
 }
 
-.btn-inverted-coral {
-  background-color: var(--color-canvas);
-  color: var(--color-ink);
-  border: 1px solid transparent;
-  font-weight: 500;
-}
-
-.btn-inverted-coral:hover {
-  background-color: #f2eee6;
-}
-
-.text-link {
+.btn-inverted-purple {
+  background-color: #ffffff;
   color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  transition: color var(--transition-fast);
+  border: 1px solid transparent;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.text-link:hover {
-  text-decoration: underline;
+.btn-inverted-purple:hover {
+  background-color: #f7f1fb;
   color: var(--color-primary-active);
 }
 
@@ -343,30 +339,48 @@ body {
   align-items: center;
   gap: 6px;
   background-color: var(--color-surface-card);
-  color: var(--color-ink);
+  color: var(--color-primary);
   font-family: var(--font-body);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.4;
   border-radius: var(--rounded-pill);
   padding: 4px 14px;
   border: 1px solid var(--color-hairline);
 }
 
-.badge-coral {
+.badge-saffron {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
+  background-color: var(--color-saffron);
+  color: #ffffff;
   font-family: var(--font-body);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.4;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   border-radius: var(--rounded-pill);
   padding: 5px 14px;
+  box-shadow: 0 2px 8px rgba(242, 133, 24, 0.2);
+}
+
+.badge-purple {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: var(--rounded-pill);
+  padding: 5px 14px;
+  box-shadow: 0 2px 8px rgba(132, 19, 150, 0.25);
 }
 
 /* Top Navigation */
@@ -375,11 +389,11 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 72px;
-  background-color: var(--color-canvas);
+  height: 74px;
+  background-color: rgba(250, 248, 252, 0.94);
   border-bottom: 1px solid var(--color-hairline);
   z-index: 1000;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
 }
 
 .nav-container {
@@ -404,18 +418,21 @@ body {
 }
 
 .brand-logo-img {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
   border-radius: var(--rounded-sm);
+  background: #ffffff;
+  padding: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .brand-wordmark {
   font-family: var(--font-display);
-  font-size: 26px;
-  font-weight: 500;
+  font-size: 27px;
+  font-weight: 600;
   letter-spacing: -0.5px;
-  color: var(--color-ink);
+  color: var(--color-primary);
   display: flex;
   align-items: baseline;
   gap: 6px;
@@ -426,7 +443,7 @@ body {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 1px;
-  color: var(--color-primary);
+  color: var(--color-saffron);
   text-transform: uppercase;
 }
 
@@ -468,7 +485,7 @@ body {
 /* Mobile Nav Drawer */
 .mobile-nav-drawer {
   position: fixed;
-  top: 72px;
+  top: 74px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -503,6 +520,7 @@ body {
 .hero-section {
   padding: var(--spacing-section) 0;
   background-color: var(--color-canvas);
+  position: relative;
 }
 
 .hero-grid {
@@ -524,6 +542,14 @@ body {
 
 .hero-title {
   margin-bottom: 24px;
+}
+
+.hero-title .highlight-purple {
+  color: var(--color-primary);
+}
+
+.hero-title .highlight-saffron {
+  color: var(--color-saffron);
 }
 
 .hero-subhead {
@@ -550,7 +576,7 @@ body {
   padding: 12px 18px;
   font-family: var(--font-body);
   font-size: 15px;
-  background-color: var(--color-canvas);
+  background-color: #ffffff;
   border: 1px solid var(--color-hairline);
   border-radius: var(--rounded-md);
   color: var(--color-ink);
@@ -560,7 +586,7 @@ body {
 
 .waitlist-input:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(204, 120, 92, 0.15);
+  box-shadow: 0 0 0 3px rgba(132, 19, 150, 0.15);
 }
 
 .waitlist-form .btn-primary {
@@ -577,7 +603,7 @@ body {
 }
 
 .waitlist-message.success {
-  color: var(--color-success);
+  color: var(--color-green);
   display: block;
 }
 
@@ -614,9 +640,9 @@ body {
 }
 
 .avatar-pill:first-child { margin-left: 0; }
-.av-1 { background-color: #cc785c; }
-.av-2 { background-color: #5db8a6; }
-.av-3 { background-color: #7a288a; }
+.av-1 { background-color: var(--color-primary); }
+.av-2 { background-color: var(--color-saffron); }
+.av-3 { background-color: var(--color-green); }
 
 /* Right Hero Card: Countdown & Brand Emblem */
 .hero-launch-card {
@@ -624,10 +650,22 @@ body {
   color: var(--color-on-dark);
   border-radius: var(--rounded-xl);
   padding: 36px;
-  border: 1px solid #2f2c28;
+  border: 1px solid #2f2238;
   box-shadow: var(--shadow-elevated);
   position: relative;
   overflow: hidden;
+}
+
+.hero-launch-card::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(132, 19, 150, 0.28) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .launch-card-header {
@@ -635,7 +673,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 28px;
-  border-bottom: 1px solid #2b2824;
+  border-bottom: 1px solid #2b1f34;
   padding-bottom: 18px;
 }
 
@@ -645,15 +683,15 @@ body {
   gap: 6px;
   font-size: 12px;
   font-family: var(--font-code);
-  color: var(--color-accent-teal);
+  color: var(--color-green);
 }
 
-.status-dot-teal {
+.status-dot-green {
   width: 7px;
   height: 7px;
   border-radius: var(--rounded-full);
-  background-color: var(--color-accent-teal);
-  box-shadow: 0 0 8px var(--color-accent-teal);
+  background-color: var(--color-green);
+  box-shadow: 0 0 8px var(--color-green);
 }
 
 .launch-card-logo-showcase {
@@ -665,16 +703,17 @@ body {
 }
 
 .showcase-logo-frame {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   background: #ffffff;
   border-radius: var(--rounded-lg);
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 20px rgba(132, 19, 150, 0.2);
   margin-bottom: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .showcase-logo-frame img {
@@ -693,14 +732,15 @@ body {
 
 .showcase-brand-motto {
   font-size: 13.5px;
-  color: var(--color-on-dark-soft);
-  letter-spacing: 0.5px;
+  color: var(--color-saffron);
+  letter-spacing: 0.8px;
+  font-weight: 500;
 }
 
 /* Countdown Grid */
 .countdown-box {
   background-color: var(--color-surface-dark-soft);
-  border: 1px solid #2b2824;
+  border: 1px solid #2d1f38;
   border-radius: var(--rounded-lg);
   padding: 20px;
   margin-bottom: 24px;
@@ -708,7 +748,7 @@ body {
 
 .countdown-title {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   color: var(--color-on-dark-soft);
@@ -756,7 +796,7 @@ body {
   text-align: center;
 }
 
-/* Feature Pillars Grid (Surface Card #efe9de) */
+/* Feature Pillars Grid (Surface Card #eee4f5) */
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -775,20 +815,34 @@ body {
 
 .feature-card:hover {
   transform: translateY(-2px);
-  border-color: #dfd7cb;
+  border-color: #dfd0ea;
 }
 
 .feature-icon-wrapper {
   width: 48px;
   height: 48px;
   border-radius: var(--rounded-md);
-  background-color: var(--color-canvas);
-  border: 1px solid var(--color-hairline);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Individual Card Accents matching the 3 logo colors */
+.icon-purple {
+  background-color: var(--color-primary-light);
   color: var(--color-primary);
+}
+
+.icon-saffron {
+  background-color: var(--color-saffron-light);
+  color: var(--color-saffron);
+}
+
+.icon-green {
+  background-color: var(--color-green-light);
+  color: var(--color-green);
 }
 
 .feature-card h3 {
@@ -806,15 +860,15 @@ body {
 .feature-card-footer {
   margin-top: auto;
   padding-top: 16px;
-  border-top: 1px solid rgba(20, 20, 19, 0.06);
+  border-top: 1px solid rgba(22, 15, 30, 0.08);
 }
 
-/* Roadmap Milestones Section (Dark Navy #181715) */
+/* Roadmap Milestones Section (Dark Navy-Plum #140d1a) */
 .roadmap-section {
   background-color: var(--color-surface-dark);
   color: var(--color-on-dark);
-  border-top: 1px solid #2a2723;
-  border-bottom: 1px solid #2a2723;
+  border-top: 1px solid #2a1f33;
+  border-bottom: 1px solid #2a1f33;
 }
 
 .roadmap-timeline-grid {
@@ -825,7 +879,7 @@ body {
 
 .roadmap-card {
   background-color: var(--color-surface-dark-soft);
-  border: 1px solid #2f2c28;
+  border: 1px solid #2d1e37;
   border-radius: var(--rounded-lg);
   padding: 28px;
   position: relative;
@@ -833,16 +887,17 @@ body {
 
 .roadmap-card.active-phase {
   border-color: var(--color-primary);
-  box-shadow: 0 0 20px rgba(204, 120, 92, 0.15);
+  box-shadow: 0 0 24px rgba(132, 19, 150, 0.25);
 }
 
 .roadmap-phase-num {
   font-family: var(--font-code);
   font-size: 12px;
-  color: var(--color-primary);
+  color: var(--color-saffron);
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 8px;
+  font-weight: 600;
 }
 
 .roadmap-card h4 {
@@ -868,34 +923,34 @@ body {
   font-family: var(--font-code);
 }
 
-/* Callout Card (Coral) */
-.callout-card-coral {
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
+/* Callout Card (Royal Purple to Saffron Horizon) */
+.callout-card-purple {
+  background: linear-gradient(135deg, #6c107c 0%, #841396 60%, #9b1ba8 100%);
+  color: #ffffff;
   border-radius: var(--rounded-lg);
   padding: 64px 48px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 12px 32px rgba(204, 120, 92, 0.25);
+  box-shadow: 0 16px 36px rgba(132, 19, 150, 0.35);
 }
 
-.callout-coral-content {
+.callout-purple-content {
   max-width: 680px;
   position: relative;
   z-index: 2;
 }
 
-.callout-card-coral h2 {
+.callout-card-purple h2 {
   font-family: var(--font-display);
   font-size: 38px;
   font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.5px;
-  color: var(--color-on-primary);
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
-.callout-card-coral p {
+.callout-card-purple p {
   font-size: 18px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.95);
@@ -919,7 +974,7 @@ body {
   background-color: var(--color-surface-dark);
   color: var(--color-on-dark-soft);
   padding: 64px 0 40px;
-  border-top: 1px solid #25221e;
+  border-top: 1px solid #281d31;
 }
 
 .footer-top {
@@ -927,7 +982,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding-bottom: 40px;
-  border-bottom: 1px solid #282521;
+  border-bottom: 1px solid #2a1e34;
   margin-bottom: 48px;
   flex-wrap: wrap;
   gap: 20px;
@@ -942,7 +997,7 @@ body {
 }
 
 .footer-brand .brand-wordmark {
-  color: var(--color-on-dark);
+  color: #ffffff;
 }
 
 .footer-grid {
@@ -975,7 +1030,7 @@ body {
 }
 
 .footer-link:hover {
-  color: var(--color-on-dark);
+  color: var(--color-saffron);
 }
 
 .footer-bottom {
@@ -983,7 +1038,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding-top: 32px;
-  border-top: 1px solid #23201d;
+  border-top: 1px solid #23182b;
   font-size: 13px;
   color: var(--color-muted-soft);
   flex-wrap: wrap;
